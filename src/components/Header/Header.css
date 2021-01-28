@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  padding: 200px;
+  padding-top: 80px;
+  margin-left: 70px;
+  margin-right: 70px;
+  background-image: url(../../images/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
+
+.left-emoji {
+  padding: 30px;
+  background-image: url(../../images/left-emoji.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+}
+
+.right-emoji {
+  padding: 30px;
+  background-image: url(../../images/right-emoji.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+}
+
+@media screen and (max-width: 760px) {
+  .logo {
+    padding: 100px;
+  }
+}
