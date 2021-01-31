@@ -12,7 +12,6 @@ const Card = () => {
   });
 
   const [questions, setQuestions] = useState([]);
-  const [currentQuestion, setCurrentQuestion] = useState(undefined);
   const [score, setScore] = useState(0);
 
   return (
@@ -20,8 +19,22 @@ const Card = () => {
       {position.start && (
         <Start setPosition={setPosition} setQuestions={setQuestions} />
       )}
-      {position.playing && <Playing />}
-      {position.end && <End />}
+      {position.playing && (
+        <Playing
+          questions={questions}
+          score={score}
+          setScore={setScore}
+          setPosition={setPosition}
+        />
+      )}
+      {position.end && (
+        <End
+          score={score}
+          setPosition={setPosition}
+          setScore={setScore}
+          numOfQuestions={questions.length}
+        />
+      )}
     </div>
   );
 };

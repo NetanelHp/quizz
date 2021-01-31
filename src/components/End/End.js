@@ -1,9 +1,21 @@
 import React from "react";
+import "./End.css";
+import { Button } from "@material-ui/core";
 
-const End = () => {
+const End = ({ score, setPosition, setScore, numOfQuestions }) => {
+  const onPlayAgainClick = () => {
+    setPosition({ start: true, playing: false, end: false });
+    setScore(0);
+  };
   return (
-    <div>
-      <h1>End</h1>
+    <div className="score">
+      <h1>Your Score</h1>
+      <p>
+        {score}/<span>{numOfQuestions}</span>
+      </p>
+      <Button variant="contained" color="primary" onClick={onPlayAgainClick}>
+        Play Again
+      </Button>
     </div>
   );
 };
