@@ -8,11 +8,10 @@ const Answer = ({ answer, setAnsweredQuestioned, clicked }) => {
   return (
     <Grid item xs={12} md={6}>
       <button
+        dangerouslySetInnerHTML={{ __html: answer }}
         className={clicked === answer ? "answer-btn clicked" : "answer-btn"}
         onClick={onAnswerClick}
-      >
-        {answer}
-      </button>
+      />
     </Grid>
   );
 };
